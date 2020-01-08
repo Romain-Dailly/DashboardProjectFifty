@@ -1,0 +1,17 @@
+export * from './admin.service';
+import { ApiAdminService } from './admin.service';
+export * from './carrier.service';
+import { ApiCarrierService } from './carrier.service';
+export * from './fms.service';
+import { ApiFmsService } from './fms.service';
+export * from './geo.service';
+import { ApiGeoService } from './geo.service';
+export * from './social.service';
+import { ApiSocialService } from './social.service';
+export * from './system.service';
+import { ApiSystemService } from './system.service';
+export * from './tms.service';
+import { ApiTmsService } from './tms.service';
+export * from './user.service';
+import { ApiUserService } from './user.service';
+export const APIS = [ApiAdminService, ApiCarrierService, ApiFmsService, ApiGeoService, ApiSocialService, ApiSystemService, ApiTmsService, ApiUserService];

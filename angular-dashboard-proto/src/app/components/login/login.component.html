@@ -1,0 +1,35 @@
+<!--Sidenav-->
+<app-sidenav *ngIf='!isLoading' ></app-sidenav>
+<!--Transition translate overlay-->
+<div class="sidenav-overlay"></div>
+<!--Login-->
+<form class="form" (ngSubmit)='login()'>
+  <mat-card class="login-form">
+    <div class='overlay'></div>
+    <div class='title-dashboard'>
+      <img class='logo' src='../../../assets/img/logo_vert.svg' alt='logo'/>
+      <h3>DASHBOARD</h3>
+    </div>
+    <h4 class='connection-title'>{{text.login.connection}}</h4>
+    <div class="email">
+      <mat-form-field>
+        <input matInput placeholder="{{text.login.emailPlaceholder}}" [formControl]="user" type='text' required>
+        <mat-error *ngIf="user.invalid">{{getUserErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="password">
+      <mat-form-field>
+        <input matInput placeholder="{{text.login.passwordPlaceholder}}" [formControl]="password" [type]="hide ? 'password' : 'text'" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon> 
+        </button>
+        <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+        <mat-error *ngIf='errorPost'>{{getError()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class='button-container'>
+      <button class='button' type='submit' >{{text.login.submit | uppercase}}</button>
+    </div>
+  </mat-card>
+</form>
+

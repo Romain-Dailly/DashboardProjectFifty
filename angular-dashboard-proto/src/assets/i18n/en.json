@@ -1,0 +1,94 @@
+{ 
+  "allText" : {    
+    "year": "year",
+    "month": "month",
+    "day": "day",
+    "distances": "Distances",
+    "activity": "Activities",
+    "customer": "Customer",
+    "driver": "Driver",
+    "truck": "truck",
+    "units": {
+      "euros": "euros"
+    },
+    "pieChartBenefit": {
+      "title": "Turnover :",
+      "labelExpenses": "Expenses",
+      "labelRevenues": "Revenues"
+    },
+    "lineBarChartEmpty": {
+      "title": "Empty transportation rate :",
+      "labels": {
+        "labelYaxeLine": "Ratio in %",
+        "labelYaxe2": "Distance in Km",
+        "labelDataLine": "Rapport distance à vide sur distance totale en %",
+        "labelData1": "Distance à vide en km",
+        "labelData2": "Distance totale en km"
+      }
+    },
+    "lineBarChartKmPrice": {
+      "title": "Prix moyen du km :",
+      "labels": {
+        "labelYaxeLine": "Prix en euros",
+        "labelYaxe2": "Prix en euros",
+        "labelDataLine": "Bénéfice au km",
+        "labelData1": "Prix réel du km",
+        "labelData2": "Prix palier du km"
+      }
+    },
+    "doughnutChartFilling": {
+      "title": "Taux de remplissage :",
+      "labels": {
+        "label1": "Chargement réel en mL",
+        "label2": "Capacité totale en mL"
+      }
+    },
+    "filters": {
+      "activities": {
+        "title": "Type d'activité",
+        "label": "Activité",
+        "all": "Toutes activités",
+        "general": "Général",
+        "cold": "Froid",
+        "exceptional":"Exceptionnel"
+      },
+      "customers": {
+        "title": "Par clients",
+        "label": "Client",
+        "all": "Tous",
+        "cust1" : "Client 1",
+        "cust2" : "Client 2",
+        "cust3" : "Client 3"
+      },
+      "date":{
+        "title": "Echelle de temps",
+        "year": "Année",
+        "month": "Mois"
+      },
+      "distances": {
+        "title": "Distances des trajets",
+        "label": "Distances trajets",
+        "all": "Toutes distances",
+        "short": "Moins de 100kms",
+        "middle": "Entre 100kms et 300kms",
+        "long": "Plus de 300kms"
+      },
+      "drivers": {
+        "title": "Par conducteurs",
+        "label": "Conducteur",
+        "all": "Tous",
+        "driv1": "Conducteur 1",
+        "driv2": "Conducteur 2",
+        "driv3": "Conducteur 3"
+      },
+      "trucks": {
+        "title": "Par tracteur",
+        "label": "Vehicule",
+        "all": "Tous",
+        "truck1": "Tracteur 1",
+        "truck2": "Tracteur 2",
+        "truck3": "Tracteur 3"
+      }
+    }
+  }
+}

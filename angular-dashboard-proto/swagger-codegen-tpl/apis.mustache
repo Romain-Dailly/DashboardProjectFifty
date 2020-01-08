@@ -1,0 +1,12 @@
+{{#apiInfo}}
+{{#apis}}
+{{#operations}}
+export * from './{{ classFilename }}';
+import { Api{{ classname }} } from './{{ classFilename }}';
+{{/operations}}
+{{#withInterfaces}}
+export * from './{{ classFilename }}Interface'
+{{/withInterfaces}}
+{{/apis}}
+export const APIS = [{{#apis}}{{#operations}}Api{{ classname }}{{/operations}}{{^-last}}, {{/-last}}{{/apis}}];
+{{/apiInfo}}

@@ -1,0 +1,33 @@
+.container{
+  padding-left:15px;
+}
+.distances-selector {
+  display:flex;
+  margin-top: 10px;
+  color:rgba(187, 187, 187, 1);
+}
+
+/**mat-select*/
+label {
+  color:rgba(187, 187, 187, 1);
+  font-size:10px!important;
+  text-transform:uppercase!important;
+  font-weight:600!important;
+  letter-spacing:1px!important;
+}
+
+:host ::ng-deep .mat-form-field{
+  text-align:center;
+}
+:host ::ng-deep .mat-select{
+  font-size:14px!important;
+  background-color:rgb(74, 80, 87);
+  padding:8px;
+  border-radius:8px;
+}
+:host ::ng-deep .mat-form-field-underline{
+  display:none;
+}
+:host ::ng-deep .mat-select-value{
+    color:white;
+}

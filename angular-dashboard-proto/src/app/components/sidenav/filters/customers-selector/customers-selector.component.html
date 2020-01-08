@@ -1,0 +1,15 @@
+<div class='customers-selector'>
+
+  <!--Select-->
+  <div class='container'>
+    <mat-form-field>
+        <mat-label>{{text.label}}</mat-label>
+        <mat-select matNativeControl [formControl]="customer" (selectionChange)='setGeneralStore(customer)' required>
+            <mat-option value="all">{{text.all}}</mat-option>
+          <mat-option value="cust1">{{text.cust1}}</mat-option>
+          <mat-option value="cust2">{{text.cust2}}</mat-option>
+          <mat-option value="cust3">{{text.cust3}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+</div>

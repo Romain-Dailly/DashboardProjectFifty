@@ -1,0 +1,107 @@
+.presets {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  max-height:100%;
+  width:452px;
+}
+.inline-with-trash {
+  display:inline;
+}
+.fa-trash{
+  margin-top:4px;
+  margin-left:1em;
+  margin-right:1em;
+}
+.fa-trash:hover{
+  color:rgb(54, 212, 133);
+  cursor:pointer;
+}
+.button-container {
+  display:flex;
+  justify-content:center;
+  margin-left:4px;
+  vertical-align:center;
+  padding-top:35px;
+}
+.button {
+  width:130px;
+  color:rgb(31, 207, 119);
+  border-radius:15px;
+  font-size: 16px;
+  font-weight:400;
+  text-transform:uppercase;
+  height:60px;
+  margin: 0;
+  margin-top: 0px;
+}
+.button:hover {
+  color:rgb(41, 223, 132);
+  cursor:pointer;
+}
+.disabled {
+  position: absolute;
+  width:130px;
+  height: 60px;
+}
+:host ::ng-deep .mat-form-field{
+  padding-top:7px;
+  text-align:center;
+}
+:host ::ng-deep .mat-select{
+  font-size:14px!important;
+  background-color:rgb(241, 241, 241);
+  padding:8px;
+  border-radius:8px;
+}
+:host ::ng-deep .mat-form-field-underline{
+  display:none;
+}
+:host ::ng-deep .mat-select-value{
+    color:black;
+}
+
+
+@media screen and (max-width: 1070px) {
+  .presets {
+    position:relative;
+    z-index:3;
+    display:flex;
+    background-color:white;
+    justify-content:center;
+    width:100%;
+    margin-left:2.5em;
+    height:5em;
+    padding-right:3.5em;
+    align-items:center;
+    text-align:center;
+    max-height:100%;
+  }
+  .inline-with-trash {
+    display:inline;
+  }
+  .fa-trash{
+    margin-left:1em;
+    margin-right:1em;
+  }
+  .fa-trash:hover{
+    color:rgb(54, 212, 133);
+    cursor:pointer;
+  }
+  .button {
+    display:flex;
+    justify-content:center;
+    vertical-align:center;
+    width:100px;
+    padding-top:3px;
+  }
+  .disabled{
+    width:100px;
+  }
+  mat-form-field {
+    width:150px;
+    left:5px;
+  }
+}

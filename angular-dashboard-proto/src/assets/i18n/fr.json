@@ -1,0 +1,239 @@
+{ 
+  "allText" : {
+    "user": {
+      "infos":"Informations utilisateur",
+      "company": "Société",
+      "identifier": "Identifiant",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "userSince": "Utilisateur depuis le"
+    },
+    "login": {
+      "connection":"Connexion",
+      "emailPlaceholder":"Identifiant B2P",
+      "passwordPlaceholder":"Mot de passe",
+      "errorNoUser":"Vous devez entrer votre identifiant B2P",
+      "errorNoPassword":"Vous devez saisir un mot de passe",
+      "errorPost401": "Mauvais identifiant ou mot de passe",
+      "submit": "Valider",
+      "error": "Email invalide",
+      "logOut": "Se déconnecter"
+    },
+    "unset":"non-renseigné",  
+    "year": "Année",
+    "month": "Mois",
+    "day": "Jour",
+    "distances": "Distances",
+    "activity": "Activité",
+    "customer": "Client",
+    "driver": "Conducteur",
+    "truck": "Véhicule",
+    "units": {
+      "euros": "€",
+      "percents": "%"
+    },
+    "orders": {
+      "noOrders":"Pas d'offres pour cette période",
+      "resizableTitle":"Redimensionnable",
+      "minNames": {
+        "goodType": {
+            "general_merchandise": "MG",
+            "skips": "B",
+            "tankers": "C",
+            "governed_temperature":"TD",
+            "containers": "CONT",
+            "moving":"DEM",
+            "exceptional_transport":"TE",
+            "messaging":"MESS",
+            "bulky_transport":"TV"
+        },
+        "truckTypes" : {
+          "van":"Fourg",
+          "flat_bed":"Plat",
+          "taut":"Taut",
+          "cereal_lorry":"Céréalière",
+          "moving_bottom":"Fm",
+          "reinforced":"Renf",
+          "governed_temperature_other":"Frais",
+          "multi_temperature":"Multi",
+          "non_refrigerated":"Non-réfr",
+          "frozen_food":"Surg",
+          "is20_feet":"20p",
+          "is40_feet":"40p",
+          "category_1":"C1",
+          "category_2":"C2",
+          "category_3":"C3"
+        } 
+      }
+    },
+    "linkToHome":"Accueil",
+    "linkToCreateFilter":"Nouveau filtre",
+    "titleOnHover":"Cliquez pour voir les offres",
+    "turnoverBarChart": {
+      "title": "Nombre d'offres retenues :",
+      "title2": "Chiffre d'affaire :",
+      "labels": {
+        "labelYaxeLine": "Montant en euros",
+        "labelYaxe2": "Prix au km",
+        "labelDataLine": "Cumul prix negociés en euros",
+        "labelData1": "Prix négocié au km en euros",
+        "labelData2": ""
+      }
+    },
+    "fillingRatesChart": {
+      "title": "Taux de remplissage linéaire moyen :",
+      "title2":"Taux de remplissage au poids moyen :",
+      "labels": {
+        "labelYaxeLine": "Rapport en %",
+        "labelYaxe2": "Rapport en %",
+        "labelDataLine": "Taux de remplissage linéaire en %",
+        "labelData1": "Taux de remplissage au poids en %",
+        "labelData2": "Taux de remplissage"
+      }
+    },
+    "kmPricesChart": {
+      "title": "Prix moyen du mètre linéaire par km :",
+      "title2":"Prix moyen de la tonne par km :",
+      "labels": {
+        "labelYaxeLine": "Prix en euros",
+        "labelYaxe2": "Prix en euros",
+        "labelDataLine": "Prix du mètre linéaire/km",
+        "labelData1": "Prix de la tonne/km",
+        "labelData2": "Prix de la tonne/km"
+      }
+    },
+    "ordersCountPieChart": {
+      "title": "Nombre d'offres retenues :",
+      "labels": {
+        "label1": "Moins de 100kms",
+        "label2": "Entre 100 et 300kms",
+        "label3": "Plus de 300kms"
+      }
+    },
+    "filters": {
+      "filtersTitle":"Filtres à appliquer aux offres retenues sur FiftyTruck",
+      "sidenavTitle":"Filtrer les offres retenues",
+      "reset": "Réinitialiser les filtres",
+      "buttonTitle":"Valeurs des filtres  temps, distances et nature du transport par défault",
+      "saveChanges": "enregistrer", 
+      "saveHelp":"Enregistrez vos modifications de filtres dans le réglage",
+      "activities": {
+        "title": "Filtre nature du transport",
+        "label": "Nature du transport",
+        "menuLabels":{
+          "all":{
+            "label":"TOUT",
+            "all":"Tous"
+          },
+          "general_merchandise":{
+            "label":"MARCHANDISES GENERALES",
+            "all": "Tous",
+            "van":"Fourgon",
+            "flat_bed":"Plateau",
+            "taut":"Taut"
+          },
+          "skips":{
+            "label":"BENNES",
+            "all":"Tous",
+            "cereal_lorry":"Céréalière",
+            "moving_bottom":"Fond mouvant",
+            "reinforced":"Renforcée"
+          },
+          "tankers": {
+            "label":"CITERNES",
+            "all":"Tous",
+            "liquid":"Liquide",
+            "tankers_other":"Pulvée"
+          },
+          "governed_temperature":{
+            "label":"TEMPERATURE DIRIGEE",
+            "all":"Tous",
+            "governed_temperature_other":"Frais",
+            "multi_temperature":"Multitempérature",
+            "non_refrigerated":"Non-réfrigéré",
+            "frozen_food":"Surgelé"
+          },
+          "containers":{
+            "label":"CONTAINERS",
+            "all":"Tous",
+            "is20_feet":"20 pieds",
+            "is40_feet":"40 pieds"
+          },
+          "moving":{
+            "label":"DEMENAGEMENT",
+            "all":"Tous",
+            "category_1":"Catégorie 1",
+            "category_2":"Catégorie 2",
+            "category_3":"Catégorie 3"
+          },
+          "exceptional_transport":{
+            "label":"TRANSPORT EXCEPTIONNEL",
+            "all":"Tous"
+          },
+          "messaging":{
+            "label":"MESSAGERIES ET COURSE",
+            "all":"Tous"
+          },
+          "bulky_transport":{
+            "label":"TRANSPORT VOLUMINEUX",
+            "all":"Tous"
+          }
+        }  
+      },
+      "customers": {
+        "title": "Par clients",
+        "label": "Client",
+        "all": "Tous",
+        "cust1" : "Client 1",
+        "cust2" : "Client 2",
+        "cust3" : "Client 3"
+      },
+      "date":{
+        "title": "Filtres échelle de temps",
+        "infoTitle":"Cliquez sur le calendrier pour choisir une période",
+        "year": "Année",
+        "month": "Mois"
+      },
+      "distances": {
+        "title": "Filtre distances des trajets",
+        "label": "Distances trajets",
+        "all": "Toutes distances",
+        "short": "Moins de 100kms",
+        "middle": "Entre 100kms et 300kms",
+        "long": "Plus de 300kms"
+      },
+      "drivers": {
+        "title": "Par conducteurs",
+        "label": "Conducteur",
+        "all": "Tous",
+        "driv1": "Conducteur 1",
+        "driv2": "Conducteur 2",
+        "driv3": "Conducteur 3"
+      },
+      "trucks": {
+        "title": "Par tracteur",
+        "label": "Vehicule",
+        "all": "Tous",
+        "truck1": "Tracteur 1",
+        "truck2": "Tracteur 2",
+        "truck3": "Tracteur 3"
+      },
+      "presets": {
+        "creationHelp":"Modifiez les filtres pour créer votre nouveau réglage",
+        "deleteFilter": "Supprimer le réglage",
+        "SnackFilterCreated": "a bien été créé",
+        "SnackFilterModified": "a bien été modifié",
+        "SnackFilterDeleted": "a bien été supprimé",
+        "title":"Mes réglages personnalisés",
+        "infoTitle":"Un réglage est un ensemble de filtres",
+        "label": "Mes réglages sauvegardés",
+        "defaultName":"Aucun préréglage",
+        "button": "+ créer",
+        "modalTitle": "Nom du réglage personnalisé :",
+        "ok": "Enregistrer",
+        "close": "Fermer"
+      }
+      
+    }
+  }
+}

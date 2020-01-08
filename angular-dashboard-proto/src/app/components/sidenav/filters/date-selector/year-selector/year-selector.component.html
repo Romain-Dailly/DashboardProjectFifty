@@ -1,0 +1,19 @@
+<div class='container'  title='{{text.infoTitle}}'>
+  <mat-form-field >
+    
+    <mat-datepicker-toggle matSuffix [for]="dpYear"></mat-datepicker-toggle>
+    <label>{{text.year}}</label>
+    <input matInput 
+    [min]="minDate"
+    [max]="maxDate"
+    [matDatepicker]="dpYear"
+    [formControl]="dateYear">
+    <mat-datepicker #dpYear
+    startView="multi-year"
+    (yearSelected)="chosenYearHandler($event, dpYear)"
+    panelClass="year-picker"
+    disabled="false"
+    >
+    </mat-datepicker>
+  </mat-form-field>
+</div>

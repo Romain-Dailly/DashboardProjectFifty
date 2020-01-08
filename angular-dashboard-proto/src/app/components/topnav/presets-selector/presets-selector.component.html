@@ -1,0 +1,16 @@
+<div class='presets'>
+
+  <div class='inline-with-trash'>
+    <mat-form-field *ngIf="filtersList">
+      <mat-select [formControl]="filterState" (selectionChange)='setGeneralStore(filterState)'>
+        <mat-option *ngFor='let filter of filtersList; index as i;' value={{i}}>{{filter.filters.filterName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <i *ngIf='isCreatedFilterSelected' class="fas fa-trash" title='{{text.presets.deleteFilter}}'(click)='deleteFilter()'></i>
+  </div>
+  <app-dialog-box class='dialog-box' *ngIf='!isButtonToModify' [text]='text' [storeFilters]='storeFilters' [disabled]='isButtonDisabled' (newFilter)='newFilterCreated()'></app-dialog-box>
+  <div class='button-container'>
+    <div *ngIf='isButtonDisabled && isButtonToModify' class='disabled' title='{{text.saveHelp}}'></div>
+    <div *ngIf='isButtonToModify' class='button' (click)='modifyFilter()' title='{{text.saveHelp}}'><p>{{text.saveChanges}}</p></div>
+  </div>
+</div>

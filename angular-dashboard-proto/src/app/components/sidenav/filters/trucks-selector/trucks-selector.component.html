@@ -1,0 +1,19 @@
+<div class='trucks-selector'>
+  <!--Icon-->
+  <div class='icon-container'>
+    <i class="fas fa-truck" title="{{text.title}}"(click)='toggleSelector()'></i>
+  </div>
+
+  <!--Select-->
+  <div class='container'>
+    <mat-form-field>
+        <mat-label>{{text.label}}</mat-label>
+        <mat-select matNativeControl [formControl]="vehicle" (selectionChange)='setGeneralStore(vehicle)'>
+          <mat-option value='all'>{{text.all}}</mat-option>
+          <mat-option value='truck1'>{{text.truck1}}</mat-option>
+          <mat-option value='truck2'>{{text.truck2}}</mat-option>
+          <mat-option value='truck3'>{{text.truck3}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+</div>

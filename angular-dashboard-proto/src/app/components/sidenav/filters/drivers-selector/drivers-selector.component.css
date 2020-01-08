@@ -1,0 +1,21 @@
+.drivers-selector {
+  display:flex;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+/**mat-select*/
+label {
+  color:rgba(187, 187, 187, 1);
+  font-size:14px;
+}
+:host ::ng-deep .mat-form-field{
+  text-align:center;
+}
+:host ::ng-deep .mat-select{
+  font-size:14px!important;
+}
+:host ::ng-deep .mat-select-value{
+  color:rgba(187, 187, 187, 1)!important;
+  font-size:14px!important;
+}

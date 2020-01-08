@@ -1,0 +1,74 @@
+<!--Spinner--> 
+<div *ngIf='isLoading' class='spinner-home'>
+  <mat-spinner diameter='60' strokeWidth='2'></mat-spinner>
+</div>
+<!--Home container-->
+<div class='all-content'>
+  <app-topnav *ngIf='!isLoading' [text]='translatedText' [dataFromStore]='dataFromStore'></app-topnav>
+  <app-sidenav *ngIf='!isLoading' [dataFromStore]='dataFromStore'></app-sidenav>
+  <div class='home-wrapper' *ngIf='!isLoading'>
+    <div class='container-fluid'>
+
+      <!--Row of cards-->
+      <div class='row cards'>
+
+        <!--Orders count pie chart-->
+        <mat-card class='orders-count-card col-10 col-md-5 '>
+            <div *ngIf='!dataForOrdersCountPieChart && isOrdersCountPieChartLoading' class='spinner'>
+                <mat-spinner diameter='40' strokeWidth='2'></mat-spinner>
+            </div>
+            <app-pie-chart *ngIf='dataForOrdersCountPieChart && !isOrdersCountPieChartLoading' [data]='dataForOrdersCountPieChart' [labels]='labelsForOrdersCountPieChart'
+            [title]='titleForOrdersCountPieChart' [options]='optionsForOrdersCountPieChart'></app-pie-chart>
+        </mat-card>
+
+        <!--filling rate-->
+        <mat-card class='filling-rate-card col-10 col-md-6'>
+          <div *ngIf='!dataForFillingRatesChart && isFillingRatesChartLoading' class='spinner'>
+            <mat-spinner diameter='40' strokeWidth='2'></mat-spinner>
+          </div>
+          <app-line-bar-chart *ngIf='dataForFillingRatesChart && !isFillingRatesChartLoading' [labels]='labelsForFillingRatesChart' [title]='titleForFillingRatesChart'
+          [data]='dataForFillingRatesChart' [options]='optionsForFillingRatesChart'
+          [width]='widthForFillingRatesChart' [height]='heightForFillingRatesChart'
+          [colors]='colorsForFillingRatesChart' [type]='dataTypesForFillingRatesChart'
+          [titleOnHover]='titleOnHover'
+          (setOrdersToShow)='setOrdersToShow($event)'>
+          </app-line-bar-chart>
+        </mat-card>
+
+        <!--KmPricesChart-->
+        <mat-card class="km-price-card col-10 col-md-6">
+          <div *ngIf='!dataForKmPricesChart' class='spinner'>
+              <mat-spinner diameter='40' strokeWidth='2'></mat-spinner>
+          </div>
+          <app-line-bar-chart *ngIf='dataForKmPricesChart' [labels]='labelsForKmPricesChart' [title]='titleForKmPricesChart'
+          [data]='dataForKmPricesChart' [options]='optionsForKmPricesChart'
+          [width]='widthForKmPricesChart' [height]='heightForKmPricesChart'
+          [colors]='colorsForKmPricesChart' [type]='dataTypesForKmPricesChart'
+          [titleOnHover]='titleOnHover'
+          (setOrdersToShow)='setOrdersToShow($event)'>
+          </app-line-bar-chart>
+        </mat-card>
+
+        <!--Turn over bar chart-->
+        <mat-card class='turnover-card col-10 col-md-5'>
+            <div *ngIf='!dataForTurnoverBarChart && isTurnoverChartLoading' class='spinner'>
+                <mat-spinner diameter='40' strokeWidth='2'></mat-spinner>
+            </div>
+          <app-line-bar-chart *ngIf='dataForTurnoverBarChart && !isTurnoverChartLoading' [labels]='labelsForTurnoverBarChart' [title]='titleForTurnoverBarChart'
+            [data]='dataForTurnoverBarChart' [options]='optionsForTurnoverBarChart' 
+            [width]='widthForTurnoverBarChart' [height]='heightForTurnoverBarChart'
+            [colors]='colorsForTurnoverBarChart' [type]='dataTypesForTurnoverBarChart'
+            [titleOnHover]='titleOnHover'
+            (setOrdersToShow)='setOrdersToShow($event)'>
+          </app-line-bar-chart>
+        </mat-card>
+      
+      </div>
+    </div>
+  </div>
+  
+  <!--Orders-->
+  <app-orders-list 
+  *ngIf='showOrdersList'
+  [ordersList]='ordersList' [text]='translatedText' (showOrdersListToFalse)='orderListToFalse($event)'></app-orders-list>
+</div>

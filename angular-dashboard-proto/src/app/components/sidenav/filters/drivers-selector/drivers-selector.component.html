@@ -1,0 +1,15 @@
+<div class='drivers-selector'>
+
+  <!--Select-->
+  <div class='container'>
+    <mat-form-field>
+        <mat-label>{{text.label}}</mat-label>
+        <mat-select matNativeControl [formControl]="driver" (selectionChange)='setGeneralStore(driver)'required>
+          <mat-option value="all">{{text.all}}</mat-option>
+          <mat-option value="driv1">{{text.driv1}}</mat-option>
+          <mat-option value="driv2">{{text.driv2}}</mat-option>
+          <mat-option value="driv3">{{text.driv3}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+</div>

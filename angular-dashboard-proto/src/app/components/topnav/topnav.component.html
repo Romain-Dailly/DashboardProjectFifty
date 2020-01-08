@@ -1,0 +1,40 @@
+<div class='topnav'>
+  <div class='content'>
+
+    <div class='left-content' title='{{text.filters.presets.infoTitle}}'>
+      <div class="icon-container-presets" >
+          <i class="fas fa-sliders-h" title="{{text.filters.title}}" (click)='click()'></i>
+      </div>
+      <div class='presets-title-overlay'></div>
+      <div class='presets-title'><p>{{text.filters.presets.title}}</p></div>
+      <app-presets-selector 
+      class='presets-selector'
+      [text]='text.filters'
+      [storeFilters]='dataFromStore'
+      [areFiltersReset]='areFiltersReset'
+      (setAreFiltersReset)='setAreFiltersReset($event)'>
+      </app-presets-selector> 
+    </div>
+
+    <div class='right-content'>
+      <p class='log-name' title="
+      {{user.carrier.companyName}}
+      {{user.operator.firstName | lowercase}}-{{user.operator.lastName | lowercase}}      
+      {{text.user.userSince}} : {{userCreationDate}}      
+      ">{{user.user.identifier}}</p>
+      <div class='button-container'>
+        <button class="button" (click)='logOut()'>{{text.login.logOut}}</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-presets-selector
+  *ngIf='isClicked'
+  class = 'small-devices-presets'
+  [text]='text.filters'
+  [storeFilters]='dataFromStore'
+  [areFiltersReset]='areFiltersReset'
+  (setAreFiltersReset)='setAreFiltersReset($event)'>
+</app-presets-selector>

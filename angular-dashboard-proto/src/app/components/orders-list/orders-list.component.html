@@ -1,0 +1,46 @@
+<!--Resizable div-->
+<div class='orders-container' 
+mwlResizable
+[ngStyle]="style"
+[enableGhostResize]="true"
+[resizeEdges]="{ top: true }"
+(resizeEnd)="onResizeEnd($event)">
+
+  <!-- Handle resize-->
+  <div
+  class="resize-handle-top"
+  mwlResizeHandle
+  [resizeEdges]="{ top: true }"
+  title='{{text.orders.resizableTitle}}'
+  >
+  </div>
+
+  <!--Content-->
+  <div class='close' (click)='setShowOrdersListToFalse()'><i class="fas fa-times"></i></div>
+  <div *ngIf='ordersList === undefined' class='spinner'>
+    <mat-spinner diameter='50' strokeWidth='2'></mat-spinner>
+  </div>
+  <div class='no-orders' *ngIf='noOrders'><p>{{text.orders.noOrders}}</p></div>
+  <div *ngIf='ordersList !== undefined && !noOrders' class='row orders'>
+    <div class='order-container'*ngFor='let order of ordersListWithFormattedDate; index as i;'>
+      <div class='date'>{{order.formattedDate | lowercase}}</div>
+      <div class='order'>
+        <div class='left-price'>
+          <p>{{order.seized_price}}{{text.units.euros}}</p>
+        </div>
+        <div class='shipper'>
+          <img src='{{order.shipper_logo}}' alt='logo' title='{{order.shipper_company_name}}'/>
+        </div>
+        <div class='weight-volume'>
+          <p>{{order.product_total_weight}}T - {{order.product_linear_footage}}m</p>  
+          <p>{{order.good_type}}-{{order.truck_types}}</p>
+        </div>
+        <div class='adresses'>
+          <p><img class='country-flag' src='../../assets/img/fr.svg'alt='flag'/>{{order.loading_point_address_zone}} {{order.loading_point_address_city | uppercase}}</p>
+          <p><img class='country-flag' src='../../assets/img/fr.svg'alt='flag'/>{{order.unloading_point_address_zone}} {{order.unloading_point_address_city | uppercase}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

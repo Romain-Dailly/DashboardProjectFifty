@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "ftklogistics/lumen-dashboard:dev"
+    restart: unless-stopped
+    ports:
+      - "10100:80"
+    volumes:
+      - ./:/var/www/html/
+    networks:
+      - local
+
+networks:
+  local:
+    driver: bridge

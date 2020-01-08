@@ -1,0 +1,193 @@
+/**thin sidenav*/
+.sidenav {
+  position:absolute;
+  z-index:2;
+  top:0px;
+  left:0;
+  height:100%;
+  width:3.8em;
+}
+.sidenav-content {
+  position: absolute;
+  height:100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3.8em;
+  background: #1f1c23;
+  z-index: 2;
+}
+.icon-container {
+  text-align:center;
+  padding-top:1em;
+  color:white;
+  margin-bottom:2em;
+}
+.icon-container-distances {
+  text-align:center;
+  padding-top:1em;
+  color:white;
+  margin-bottom:4.3em;
+}
+.icon-container-dates {
+  text-align:center;
+  padding-top:1em;
+  color:white;
+  margin-bottom:8em;
+}
+.icons-all-filters {
+  margin-top:22vh;
+}
+
+.fa-truck-loading {
+  font-size:20px;
+}
+
+i.far, i.fas{
+  font-size: 28px;
+  margin-bottom:0.1em;
+}
+/**large right sidenav*/
+.advancedSidenav {
+  position: absolute;
+  margin:0;
+  padding-left:3.8em;
+  z-index:1;
+  top: 0;
+  width:19em;
+  height:100%;
+  bottom: 0;
+  background: rgba(44, 48, 52, 1);
+  color:#bbb;
+  text-align:center;
+  animation : translate 0.5s;
+  -webkit-animation: translate 0.5s;
+}
+@keyframes translate {
+  0% {
+    transform:translateX(-310px);
+  }
+  100% {
+    transform:translateX(0px);
+  }
+}
+.logo {
+  width:42px;
+  height:42px;
+  margin-top:11px;
+  margin-bottom:20px;
+  margin-left: 9px;
+}
+.title {
+  margin-top:0.35em;
+  color:rgba(255,255,255,0.8);
+}
+.titles-overlay {
+  position:absolute;
+  width:80%;
+  height:200px;
+  background-color:transparent;
+}
+.filters-title {
+  margin-top:5vh;
+  width:100%;
+  padding:15px;
+  padding-top:12px;
+  color:#bbb;
+  font-size:12px!important;
+  text-transform:uppercase!important;
+  font-weight:600!important;
+  letter-spacing:1px!important;
+}
+.selectors {
+  margin-top:1vh;
+}
+.button-container {
+  bottom:10px;
+  display:flex;
+  justify-content:center;
+  margin-top:15vh;
+  padding-left:1em;
+  padding-right:1em;
+}
+.button {
+  width:100%;
+  color:white;
+  border:none;
+  background-color:rgb(31, 207, 119);
+  border-radius:20px;
+  height: 35px;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 0px;
+  text-transform:uppercase;
+}
+.button:hover {
+  background-color:rgb(41, 223, 132);
+  cursor:pointer;
+}
+.button:active{
+  border:none;
+}
+.disabled {
+  position: absolute;
+  background-color:rgba(9, 85, 47,0.4);
+  width:70%;
+  border-radius:15px;
+  height: 35px;
+}
+
+
+
+@media screen and (max-width: 1070px) {
+  .unshown {
+    display:none;
+  }
+  .shown {
+    position: fixed;
+    margin:0;
+    padding-left:3.8em;
+    z-index:1;
+    top: 0;
+    width:19em;
+    height:100%;
+    bottom: 0;
+    background: rgba(44, 48, 52, 1);
+    color:#bbb;
+    text-align:center;
+  }
+  i.far, i.fas {
+    cursor:pointer;
+  }
+  i.far:hover , i.fas:hover {
+    color:rgb(54, 212, 133);
+    cursor:pointer;
+  }
+  .sidenav-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2.5em;
+    height:100%;
+    background: #1f1c23;
+    z-index: 2;
+  }
+  .filters-title {
+    display:none;
+    visibility:hidden;
+  }
+  .button-container {
+    top:0;
+  }
+  .logo {
+    width:42px;
+    height:42px;
+    margin:auto;
+    margin-top:11px;
+    padding-right:1px;
+  }
+  .icons-all-filters {
+    margin-top:13vh;
+  }
+}

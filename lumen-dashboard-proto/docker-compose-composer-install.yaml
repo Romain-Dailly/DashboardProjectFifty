@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+
+  # #########################
+  # Install composer dependencies
+  # #########################
+  composer:
+    image: composer:1.7
+    command: ['composer', 'install', '--ignore-platform-reqs']
+    restart: 'no'
+    volumes:
+      - ./:/app/

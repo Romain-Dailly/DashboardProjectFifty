@@ -1,0 +1,14 @@
+<!--Chart-->
+<div *ngIf='!isLoading' class='chart-container'>
+  <canvas baseChart 
+    width='width' height='height'
+    style="max-width:98%;max-height:100%;margin:auto;"
+    [colors]="lineChart.lineChartColors"
+    [legend]="lineChart.lineChartLegend"
+    [datasets]="lineChart.lineChartData"
+    [labels]="lineChart.lineChartLabels"
+    [options]="lineChart.lineChartOptions"
+    [chartType]="lineChart.lineChartType">
+  </canvas>
+</div>
+

@@ -1,0 +1,15 @@
+<div class='distances-selector'>
+
+  <!--Select-->
+  <div class='container'>
+    <mat-form-field>
+        <label>{{text.label}}</label>
+        <mat-select matNativeControl [formControl]="distances" (selectionChange)='setGeneralStore(distances)' required>
+          <mat-option value="all">{{text.all}}</mat-option>
+          <mat-option value="short">{{text.short}}</mat-option>
+          <mat-option value="middle">{{text.middle}}</mat-option>
+          <mat-option value="long">{{text.long}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+</div>

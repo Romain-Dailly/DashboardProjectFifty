@@ -1,0 +1,8 @@
+<!--Spinner-->
+<div class='background'>
+  <div *ngIf='isLoading' class='spinner'>
+    <mat-spinner diameter='40'color='warn'></mat-spinner>
+  </div>
+  <!--App-->
+  <router-outlet *ngIf='!isLoading'></router-outlet>
+</div>

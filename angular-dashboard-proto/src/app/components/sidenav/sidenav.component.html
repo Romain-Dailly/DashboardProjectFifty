@@ -1,0 +1,38 @@
+<div class='sidenav'>
+  <div class='sidenav-content'>
+    <!--Logo-->
+    <a routerLink="/home" routerLinkActive="active">
+      <img class='logo' src='../../../assets/img/logo_blac.svg' alt='logo'/>
+    </a>
+    <div class='icons-all-filters' (click)='setIsShownSidenav()'>
+      <div class="icon-container-dates">
+          <i class="far fa-calendar-alt" title="{{translatedText.filters.date.title}}"></i>
+      </div>
+      <div class='icon-container-distances' (click)='setIsShownSidenav()'>
+          <i class="fas fa-route" title="{{translatedText.filters.distances.title}}"></i>
+      </div>
+      <div class="icon-container" (click)='setIsShownSidenav()'>
+          <i class="fas fa-truck-loading" title="{{translatedText.filters.activities.title}}"></i>
+      </div>
+    </div>
+  </div>
+  <div class='advancedSidenav' [ngClass]="{'shown' : isShownSidenav, 'unshown':!isShownSidenav}" title='{{translatedText.filters.sidenavTitle}}'>
+    <div class='titles-overlay'></div>
+    <h2 class='title'>DASHBOARD</h2>
+    <div class='filters-title'><p>{{translatedText.filters.filtersTitle}}</p></div>
+    <div class='selectors'>
+      <app-date-selector *ngIf='dataFromStore' [text]='translatedText.filters.date'[data]='dataFromStore'></app-date-selector>
+      <app-distances-selector *ngIf='dataFromStore' [text]='translatedText.filters.distances'[data]='dataFromStore'></app-distances-selector>
+      <app-activity-selector *ngIf='dataFromStore' [text]='translatedText.filters.activities'[data]='dataFromStore'></app-activity-selector>
+    <!-- <app-agencies-selector [data]='dataFromStore'></app-agencies-selector> -->
+    <!-- <app-customers-selector [text]='translatedText.filters.customers'[data]='dataFromStore'></app-customers-selector>
+    <app-drivers-selector [text]='translatedText.filters.drivers'[data]='dataFromStore'></app-drivers-selector>
+    <app-trucks-selector [text]='translatedText.filters.trucks'[data]='dataFromStore'></app-trucks-selector> -->
+    </div>
+    <div class='button-container'>
+      <button class='button' (click)='resetFilters()'  title='{{translatedText.filters.buttonTitle}}'>{{translatedText.filters.reset}}</button>
+      <div class='disabled' *ngIf='isResetButtonDisabled' title='{{translatedText.filters.buttonTitle}}'></div>
+    </div>
+  </div>
+
+</div>

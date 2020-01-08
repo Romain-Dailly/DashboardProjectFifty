@@ -1,0 +1,20 @@
+<div class='container'  title='{{text.infoTitle}}'>
+  <mat-form-field>
+    <label>{{text.month}}</label>
+    <input 
+    matInput
+    [matDatepicker]="dpMonth"
+    [formControl]="dateMonth" 
+    value=''>
+    <mat-datepicker-toggle matSuffix [for]="dpMonth"></mat-datepicker-toggle>
+    <mat-datepicker #dpMonth
+    [startAt]="startDate" 
+    startView="year" 
+    (monthSelected)="chosenMonthHandler($event, dpMonth)"
+    (change)='monthValueChanged()'
+    panelClass="month-picker"
+    disabled="false">
+    </mat-datepicker>
+  </mat-form-field>
+</div>
+

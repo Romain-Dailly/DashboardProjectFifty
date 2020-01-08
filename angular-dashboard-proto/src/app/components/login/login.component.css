@@ -1,0 +1,90 @@
+.sidenav-overlay {
+  position: absolute;
+  margin:0;
+  z-index:2;
+  height: 100%;
+  width:19em;
+  left:0px;
+  bottom: 0;
+  background: rgb(31, 28, 35);
+  opacity:0.9;
+  animation : translate 0.5s;
+  -webkit-animation: translate 0.5s;
+}
+.logo {
+  width:2.625em;
+  height:2.625em;
+  margin-right:0.25em;
+  margin-bottom:1em;
+}
+.overlay {
+  position:absolute;
+  width:90%;
+  height:5.625em;
+  background-color:transparent;
+}
+.title-dashboard {
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
+.connection-title {
+ color:rgba(0,0,0,0.5);
+}
+
+.form {
+  background-color:rgba(238, 238, 238, 1);
+  display:flex;
+  justify-content:center;
+  margin-left: 19em;
+  text-align:center;
+  height:100vh;
+  align-items:center;
+}
+.login-form {
+  min-width:15.625em;
+  width: 30%;
+  min-height:21.875em;
+  height:40vh;
+}
+.button-container {
+  text-align:center;
+}
+.button {
+  width:13.75em;
+  color:white;
+  border:none;
+  background-color:rgb(31, 207, 119);
+  border-radius:20px;
+  height: 2.1875em;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 1em;
+}
+.button:hover {
+  background-color:rgb(41, 223, 132);
+  cursor:pointer;
+}
+.button:active{
+  border:none;
+}
+
+mat-form-field{
+  color:rgba(0, 0, 0, 1)!important;
+  margin-bottom:1em;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidenav-overlay{
+    display:none;
+  }
+  .form {
+    margin-left:2.5em;
+    background-color:rgba(238, 238, 238, 1);
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    height:100vh;
+    align-items:center;
+  }
+}

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+  font-family:"OpenSans", sans-serif;
+  overflow-x:hidden;
+}
+body h1, h2, h3, p {
+  font-family:"OpenSans", sans-serif;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: rgba(31, 207, 119, 1)!important;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+  color:rgb(19, 141, 80);
+}
+.mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color:rgba(31, 207, 119, 1);
+}
+.mat-form-field.mat-focused .mat-form-field-label {
+  color:rgba(31, 207, 119, 1);
+}
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow{
+  color:rgba(31, 207, 119, 1);
+}
+.mat-calendar-body-selected {
+  background-color:rgba(31, 207, 119, 1);
+  color:white;
+}
+
+@media screen and (min-width: 1070px) {
+  body{
+    overflow:hidden;
+  }
+}

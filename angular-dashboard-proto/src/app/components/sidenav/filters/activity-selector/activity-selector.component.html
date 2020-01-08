@@ -1,0 +1,56 @@
+<div class='activity-selector'>
+
+  <!--Select-->
+  <div class='container'>
+    <mat-form-field>
+        <label>{{text.label}}</label>
+        <mat-select matNativeControl [formControl]="activity" (selectionChange)='setGeneralStore(activity)'required>
+
+          <p class='select-label'>{{text.menuLabels.all.label}}</p>
+          <mat-option value="all-all">{{text.menuLabels.all.all}}</mat-option>
+          
+          <p class='select-label'>{{text.menuLabels.general_merchandise.label}}</p>
+          <mat-option value="general_merchandise-all">{{text.menuLabels.general_merchandise.all}}</mat-option>
+          <mat-option value="general_merchandise-van">{{text.menuLabels.general_merchandise.van}}</mat-option>
+          <mat-option value='general_merchandise-flat_bed'>{{text.menuLabels.general_merchandise.flat_bed}}</mat-option>
+          <mat-option value='general_merchandise-taut'>{{text.menuLabels.general_merchandise.taut}}</mat-option>
+
+          <p class='select-label'>{{text.menuLabels.governed_temperature.label}}</p>
+          <mat-option value="governed_temperature-all">{{text.menuLabels.governed_temperature.all}}</mat-option>
+          <mat-option value="governed_temperature-governed_temperature_other">{{text.menuLabels.governed_temperature.governed_temperature_other}}</mat-option>
+          <mat-option value='governed_temperature-multi_temperature'>{{text.menuLabels.governed_temperature.multi_temperature}}</mat-option>
+          <mat-option value='governed_temperature-non_refrigerated'>{{text.menuLabels.governed_temperature.non_refrigerated}}</mat-option>
+          <mat-option value='governed_temperature-frozen_food'>{{text.menuLabels.governed_temperature.frozen_food}}</mat-option>
+
+          <p class='select-label'>{{text.menuLabels.skips.label}}</p>
+          <mat-option value="skips-all">{{text.menuLabels.skips.all}}</mat-option>
+          <mat-option value="skips-cereal_lorry">{{text.menuLabels.skips.cereal_lorry}}</mat-option>
+          <mat-option value='skips-moving_bottom'>{{text.menuLabels.skips.moving_bottom}}</mat-option>
+          <mat-option value='skips-reinforced'>{{text.menuLabels.skips.reinforced}}</mat-option>
+
+          <p class='select-label'>{{text.menuLabels.tankers.label}}</p>
+          <mat-option value="tankers-all">{{text.menuLabels.tankers.all}}</mat-option>
+          <mat-option value="tankers-liquid">{{text.menuLabels.tankers.liquid}}</mat-option>
+          <mat-option value='tankers-tankers_other'>{{text.menuLabels.tankers.tankers_other}}</mat-option>
+
+          <p class='select-label'>{{text.menuLabels.containers.label}}</p>
+          <mat-option value="containers-all">{{text.menuLabels.containers.all}}</mat-option>
+          <mat-option value="containers-is20_feet">{{text.menuLabels.containers.is20_feet}}</mat-option>
+          <mat-option value="containers-is40_feet">{{text.menuLabels.containers.is40_feet}}</mat-option>
+
+          <p class='select-label'>{{text.menuLabels.moving.label}}</p>
+          <mat-option value="moving-all">{{text.menuLabels.moving.all}}</mat-option>
+          <mat-option value="moving-category_1">{{text.menuLabels.moving.category_1}}</mat-option>
+          <mat-option value='moving-category_2'>{{text.menuLabels.moving.category_2}}</mat-option>
+          <mat-option value='moving-category_3'>{{text.menuLabels.moving.category_3}}</mat-option>
+
+          <p class='select-label'>{{text.menuLabels.messaging.label}}</p>
+          <mat-option value="messaging-all">{{text.menuLabels.messaging.all}}</mat-option>
+
+          <p class='select-label'>{{text.menuLabels.exceptional_transport.label}}</p>
+          <mat-option value="exceptional_transport-all">{{text.menuLabels.exceptional_transport.all}}</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+  </div>
+</div>
